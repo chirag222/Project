@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<title>Book Store</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+<script language="javascript">
+
+		function validate() 
+		{ 
+			
+			if( document.myForm.name.value == "" ) 
+				{ 	
+					alert( "Please provide user name" ); 
+					document.myForm.name.focus() ; 
+					return false; 
+				} 
+			
+				
+				var emailID1 = document.myForm.email.value;
+				var atpos = emailID1.indexOf("@"); 
+				var dotpos = emailID1.lastIndexOf("."); 
+				if (atpos < 1 || ( dotpos - atpos < 2 )) 
+				{ 
+					alert("Please enter correct email ID")
+					document.myForm.email.focus() ;
+					return false;
+				}
+			if( document.myForm.phone.value == "" || isNaN( document.myForm.phone.value ) || document.myForm.phone.value.length != 10 )
+				{
+					alert( "Please must provide contact no in 10 digit" ); 
+					document.myForm.phone.focus() ; 
+					return false;
+				}
+			if( document.myForm.message.value == "" ) 
+				{ 	
+					alert( "Please write any message" ); 
+					document.myForm.message.focus() ; 
+					return false; 
+				} 
+			
+			
+			
+					
+				return( true );
+			}
+		</script>
+
+
+</head>
+<body>
+<div id="wrap">
+
+       <div class="header">
+       		<div class="logo"><a href="index.html"><img src="images/logo.gif" alt="" title="" border="0" /></a></div>            
+        <div id="menu">
+            <ul>                                                                       
+            <li><a href="home.html">home</a></li>
+            <li><a href="category.html">books</a></li>
+            <li><a href="video.html">videos</a></li>
+            <li><a href="project.html">project</a></li>
+			<li><a href="Registration.html">Registration</a></li>
+			
+            <li class="selected"><a href="contact.html">contact</a></li>
+            </ul>
+        </div>     
+            
+            
+       </div> 
+       
+       
+       <div class="center_content">
+       	<div class="left_content">
+            <div class="title"><span class="title_icon"><img src="images/bullet1.gif" alt="" title="" /></span>Contact Us</div>
+        
+        	<div class="feat_prod_box_details">
+            <p class="details">
+				If you want any query or give any other sugestion so contact to our web member.
+            </p>
+            
+              	<div class="contact_form">
+                <div class="form_subtitle">all fields are requierd</div>  
+				
+					<form name="myForm" action="contact.php"  method="POST" enctype="multipart/form-data" onsubmit="return(validate());">
+                    <div class="form_row">
+                    <label class="contact"><strong>Name:</strong></label>
+                    <input type="text" class="contact_input" name="name" />
+                    </div>  
+
+                    <div class="form_row">
+                    <label class="contact"><strong>Email:</strong></label>
+                    <input type="text" class="contact_input" name="email"/>
+                    </div>
+
+
+                    <div class="form_row">
+                    <label class="contact"><strong>Phone:</strong></label>
+                    <input type="text" class="contact_input" name="phone"/>
+                    </div>
+                    
+                    <div class="form_row">
+                    <label class="contact"><strong>Message:</strong></label>
+                    <textarea class="contact_textarea" name="message"></textarea>
+                    </div>
+
+                    
+                    <div class="form_row">
+                    <input type="submit" class="register" value="send" />                  
+					</div>  
+				</form>					
+                </div>  
+				
+            
+          </div>	
+            
+              
+
+            
+
+            
+        <div class="clear"></div>
+        </div><!--end of left content-->
+        
+        <div class="right_content">
+		
+        	<div class="contact_form">
+                <div class="form_subtitle">login into your account</div>
+                 <form name="register" action="#">          
+                    <div class="form_row">
+                    <label class="contact"><strong>Username:</strong></label>
+                    <input type="text" class="contact_input" />
+                    </div>  
+
+
+                    <div class="form_row">
+                    <label class="contact"><strong>Password:</strong></label>
+                    <input type="password" class="contact_input" />
+                    </div>                     
+
+                    <div class="form_row">
+                        <div class="terms">
+                        <input type="checkbox" name="terms" />
+                        Remember me
+                        </div>
+                    </div> 
+
+                    
+                    <div class="form_row">
+                    <input type="submit" class="register" value="login" />
+                    </div>   
+                    
+                  </form>     
+                    
+                </div>  
+                       
+            	
+        
+        
+             <div class="title"><span class="title_icon"><img src="images/bullet3.gif" alt="" title="" /></span>About Our Store</div> 
+             <div class="about">
+             <p>
+             <img src="images/about.gif" alt="" title="" class="right" />
+            Our Store give best ebooks or videos.We give e-books, videos, projects to related your term.And you easly download content.
+             </p>
+             
+             </div>
+             
+            
+             
+             <div class="right_box">
+             
+             	<div class="title"><span class="title_icon"><img src="images/bullet5.gif" alt="" title="" /></span>Categories</div> 
+                
+                <ul class="list">
+                <li><a href="category.html">Engineering</a></li>
+                <li><a href="#">Novels</a></li>
+                <li><a href="#">specials</a></li>
+                <li><a href="#">New Technologys</a></li>
+                <li><a href="#">Others</a></li>
+                
+                </ul>
+                
+             	
+             </div>         
+             
+        
+        </div><!--end of right content-->
+        
+        
+       
+       
+       <div class="clear"></div>
+       </div><!--end of center content-->        
+        
+       
+       
+       <div class="clear"></div>
+       </div><!--end of center content-->
+        
+        
+       
+       
+       <div class="clear"></div>
+       </div><!--end of center content-->
+       
+              
+       <div class="footer">
+       	<div class="left_footer"><img src="images/footer_logo.gif" alt="" title="" /><br /> <a href="http://csscreme.com/freecsstemplates/" title="free templates"><img src="images/csscreme.gif" alt="free templates" title="free templates" border="0" /></a></div>
+        <div class="right_footer">
+        <a href="home.html">Home</a>
+        <a href="#">About us</a>
+        <a href="category.html">E-Books</a>
+        <a href="contact.html">Contact us</a>
+       
+        </div>
+        
+       
+       </div>
+    
+
+</div>
+
+</body>
+</html>
